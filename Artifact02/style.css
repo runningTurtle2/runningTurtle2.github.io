@@ -8,7 +8,11 @@
   top:0px;
   left:0px; 
   padding:10px;
-  margin:0px;
+  
+  margin-top: 0%;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-bottom: 10%;
   width:100%;
   background-color:lightgreen;
   z-index:10;
@@ -43,15 +47,15 @@
 }
 .clear{
   clear:both;
-}
-img {
-  margin-left: 5px;
-  margin-top: 10px;
+  img{
+    margin-left:5px;
+    margin-top:10px;
+  }
 }
 #footer{
   border: solid 1px;
   padding: 10px;
-  margin: 10px;
+  margin: 15px;
   background-color: lightgreen;
   text-align: center;
 }
