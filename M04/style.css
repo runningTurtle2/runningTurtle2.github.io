@@ -1,0 +1,58 @@
+* {
+	font-family: Arial, Verdana, sans-serif;
+	color: white;
+	text-align: center;}
+h1{
+   font-family: 'AmaranthRegular';
+   font-weight: bold;
+   font-style: normal;
+   color: yellow;
+}
+body {
+  background-image:url(https://images.cloudflareapps.com/EJzyxsCCQOeRa71a83tX_background-2.jpeg);			  
+  width: 90%;
+	margin: 0 auto;}
+#content {
+	overflow: auto;}
+#nav, #feature, #footer {
+	margin: 1%;}
+.column1, .column2, .column3 {
+	width: 31.3%;
+	float: left;
+	margin: 1%;}
+.column3 {
+	margin-right: 0%;
+}
+li {
+	display: inline;
+	padding: 0.5em;}
+
+#nav{
+  background-color: rgba(0, 125, 255); 
+}
+#feature{
+  background-color: rgb(230, 127, 121);
+  background-image: url(https://i5.walmartimages.com/asr/0f630996-8aac-4513-9bb7-30b87465d7a0.bcb61b84eedf75ec0303d5cce3b8959f.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF);
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.column1{
+  background-color: #d7eaf7
+}
+.column2{
+  background-color: #ccff0d;
+}
+.column3{
+  background-color: #90c290;
+}
+
+#footer {
+	background-color: #cc8c62;
+	padding: 0.5em 0;
+}
+#feature, .article {
+	height: 10em;
+	margin-bottom: 1em;
+}
