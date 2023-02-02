@@ -1,2 +1,2 @@
 # runningTurtle2.github.io
-Website for class
+Website for class projects
