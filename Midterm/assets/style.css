@@ -42,6 +42,10 @@ body {
   width: 100px;
   height: auto;
 }
+#validate img{
+  width: 480px;
+  height: auto;
+}
 .simple {
   font-size: 30px;
   height: auto;
