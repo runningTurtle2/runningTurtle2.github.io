@@ -49,4 +49,7 @@ body {
 }
 input, textarea{
   color: black;
+  padding: .1em;
+  border-radius: 4px;
+  margin-top: 1px;
 }

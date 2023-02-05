@@ -24,7 +24,7 @@
         
 		<div id="content">
 			<div id="feature">
-				<form action="/Midterm/thankyou.html" method="get">
+				<form action="/Midterm/thankyou.html" method="get" name="myContact">
 				<fieldset>
 					<label>
 						Name:
@@ -32,17 +32,18 @@
 					</label><br>
 					<label>
 						Email:
-						<input type="email" name="email" size="30" maxlength="60">
+						<input type="email" name="email" size="30" maxlength="60" onsubmit="return(validateEmail())">
 					</label><br>
-					<label>
-						Comment:
-						<textarea name="Comment" cols="30" rows="10">
-							Enter comments...
+					<p>Comments:</p>
+					<label id="comment">
+						<textarea name="Comment" cols="35" rows="6" onsubmit="return(validateComm())">Enter comments...
 						</textarea>
-					</label>
+					</label><br>
+					<input type="submit" value="Submit">
 				</fieldset>
 				</form>
 			</div>
         </div>
+		<script src="/Midterm/assets/reaction.js"></script>
 	</body>
 </html>
