@@ -63,6 +63,9 @@ li {
 	height: 50px;
 	padding-left: 1em;
 	padding-top: 10px;}
+.btnAddElement{
+	text-align: center;
+}
 
 .hot {
 	background-color: #d7666b;
