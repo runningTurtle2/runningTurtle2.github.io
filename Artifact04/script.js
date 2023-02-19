@@ -68,28 +68,28 @@ function validateForm(){
 
     //address
     if(address===null || address===""){
-        errorMessages ="<p>Invalid Address</p>";
+        errorMessages !="<p>Invalid Address</p>";
     }
     else{
         validAddress = true;
     }
     //city
     if(city===null || city===""){
-        errorMessages ="<p>Invalid Address</p>";
+        errorMessages +="<p>Invalid Address</p>";
     }
     else{
         validCity = true;
     }
     //state
     if(state===null || state===""){
-        errorMessages ="<p>Invalid Address</p>";
+        errorMessages +="<p>Invalid Address</p>";
     }
     else{
         validState = true;
     }
     //zipcode
-    if(zipCode===null || zipCode==="" || !zipCode.match(numbers) || zipCode > 5 || country != "United States"){
-        errorMessages ="<p>Invalid Zip Code</p>";
+    if(zipCode==="" || !zipCode.match(numbers) || zipCode.length > 5 || country != "United States"){
+        errorMessages +="<p>Invalid Zip Code</p>";
     }
     else{
         validZipCode = true;
