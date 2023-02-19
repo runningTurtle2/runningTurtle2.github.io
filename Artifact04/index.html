@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Artifact #4</title>
+    <link rel="Stylesheet" href="style.css" type="text/css">
+  </head>
+  <body>
+    <h1>Contact Us Form</h1>
+    <div id="errorMessages"></div>
+    <!--Add the URL to thank you page-->
+    <form action="thankyou.html" onsubmit="return validateForm();">
+      <fieldset>
+        <legend>User Informatioin</legend>
+        <label for="firstname">First name</label><br>
+        <input type="text" id="firstname"><br>
+        <label for="lastname">Last name</label><br>
+        <input type="text" id="lastname"><br>
+        <label for="email">Email</label><br>
+        <input type="text" id="email"><br>
+        <label for="phone">Phone</label><br>
+        <input type="text" id="phone"><br>
+        <label for="username">Username</label><br>
+        <input type="text" maxlength="12" id="username"><br>
+        <label for="password">Password</label><br>
+        <input type="password" maxlength="8" id="password">
+      </fieldset>
+
+      <fieldset>
+        <legend>Current Address</legend>
+        <label for="address">Address</label><br>
+        <input type="text" name="address" id="address" size="50"><br>
+        <label for="city">City</label><br>
+        <input type="text" name="city" id="city"><br>
+        <label for="countries">Choose Country</label><br>
+        <select id="countries">
+          <option>Canada</option>
+          <option>Mexico</option>
+          <option>United States</option>
+        </select><br>
+        <label for="zip">Zipcode</label><br>
+        <input type="text" name="zip" id="zipcode"><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Add comments</legend>
+        <textarea name="commentbox" id="commentbox" rows="4" cols="50"></textarea>
+      </fieldset><br>
+
+      <input id="submit" type="submit" value="Submit">
+      <input id="cancel" type="submit" value="Cancel">
+    </form>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
