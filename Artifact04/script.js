@@ -28,15 +28,19 @@ function validateForm(){
     var zipCode = document.getElementById("zipcode").value;
     //3) Do validation
     //First name
-    if (firstname==="null" || firstname==="" || firstname.length > 20 || !firstname.match(letters))
+    if (firstname==="null" || firstname==="" || firstname.length > 20 || !firstname.match(letters)){
         errorMessages += "<p>The first name is required and cannot be greater than 20 characters. Only letters are accepted.</p>";
-    else
+    }
+    else{
        validFirstname = true;
+    }
     //Last name
-    if (lastname==="null" || lastname==="" || lastname.length > 50)
-        errorMessages += "<p>The last name is required and cannot be greater than 20 characters</p>";
-    else
-       validFirstname = true;
+    if (lastname==="null" || lastname==="" || lastname.length > 50 || !lastname.match(letters)){
+        errorMessages += "<p>The last name is required and cannot be greater than 50 characters. Only letters are accepted.</p>";
+    }
+    else{
+       validLastname = true;
+    }
     //Email
     if (atpos< 1 || dotpos < atpos+2 || dotpos+2 >= userEmail.length) {
         errorMessages += "<p>Invalid email</p>";
@@ -102,7 +106,15 @@ function validateForm(){
     }
 
     document.getElementById("errorMessages").innerHTML = errorMessages;
-    
+    //testing
+    console.log(validFirstname)
+    console.log(validLastname)
+    console.log(validEmail)
+    console.log(validPhone)
+    console.log(validUsername)
+    console.log(validPassword)
+    console.log(validAddress)
+    console.log(validCity)
     //5) return status of each field
     return (validFirstname && validLastname && validEmail && validPhone && validUsername && validPassword && validAddress && validCity);
     }
