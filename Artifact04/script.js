@@ -5,11 +5,11 @@ function validateForm(){
     var validEmail = false;
     var validPhone = false;
     var validUsername = false;
+    var validPassword = false;
     var validAddress = false;
     var validCity = false;
-    var validState = false;
     var validZipCode = false;
-
+    var errorMessages = "";
     var letters =/^[A-Za-z]+$/;
     var numbers=/^[0-9]+$/;
       
@@ -18,12 +18,12 @@ function validateForm(){
     var atpos = userEmail.indexOf("@");
     var dotpos = userEmail.lastIndexOf(".");
     var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
     var lastname = document.getElementById("lastname").value;
     var firstname = document.getElementById("firstname").value;
     var phone = document.getElementById("phone").value;
     var address = document.getElementById("address").value;
     var city = document.getElementById("city").value;
-    var state = document.getElementById("state").value;
     var country = document.getElementById("country").value;
     var zipCode = document.getElementById("zipcode").value;
     //3) Do validation
@@ -47,7 +47,7 @@ function validateForm(){
     
     //Phone
     if (isNaN(phone) || phone.lenght > 15 || phone===null || phone===""){
-        errorMessages += "<p>Phone needs to be less than 15 numbers</p>";
+        errorMessages += "<p>Invalid Phone Number</p>";
     }
     else{
       validPhone = true;
@@ -65,31 +65,37 @@ function validateForm(){
     else{
         validUsername = true;
     }
+    //password
+    if(password===null || password===""){
+        errorMessages +="<p>Password cannot be empty</p>";
+    }
+    else{
+        validPassword = true;
+    }
 
     //address
     if(address===null || address===""){
-        errorMessages !="<p>Invalid Address</p>";
+        errorMessages +="<p>Invalid Address</p>";
     }
     else{
         validAddress = true;
     }
     //city
     if(city===null || city===""){
-        errorMessages +="<p>Invalid Address</p>";
+        errorMessages +="<p>Invalid City</p>";
     }
     else{
         validCity = true;
     }
-    //state
-    if(state===null || state===""){
-        errorMessages +="<p>Invalid Address</p>";
-    }
-    else{
-        validState = true;
-    }
+
     //zipcode
-    if(zipCode==="" || !zipCode.match(numbers) || zipCode.length > 5 || country != "United States"){
-        errorMessages +="<p>Invalid Zip Code</p>";
+    if(country === "United States"){
+        if(zipCode==="" || !zipCode.match(numbers) || zipCode.length > 5){
+            errorMessages +="<p>Invalid Zip Code</p>";
+        }
+        else{
+            validZipCode = true;
+        }
     }
     else{
         validZipCode = true;
@@ -98,5 +104,5 @@ function validateForm(){
     document.getElementById("errorMessages").innerHTML = errorMessages;
     
     //5) return status of each field
-    return (validFirstname && validLastname && validEmail && validPhone && validUsername && validAddress);
+    return (validFirstname && validLastname && validEmail && validPhone && validUsername && validPassword && validAddress && validCity);
     }

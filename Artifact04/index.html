@@ -10,7 +10,7 @@
     <h1>Contact Us Form</h1>
     <div id="errorMessages"></div>
     <!--Add the URL to thank you page-->
-    <form action="thankyou.html" onsubmit="return validateForm();">
+    <form action="thankyou.html" method="get" onsubmit="return validateForm();">
       <fieldset>
         <legend>User Informatioin</legend>
         <label for="firstname">First name</label><br>
@@ -22,9 +22,9 @@
         <label for="phone">Phone</label><br>
         <input type="text" id="phone"><br>
         <label for="username">Username</label><br>
-        <input type="text" maxlength="12" id="username"><br>
+        <input type="text" id="username"><br>
         <label for="password">Password</label><br>
-        <input type="password" maxlength="8" id="password">
+        <input type="password" id="password">
       </fieldset>
 
       <fieldset>
@@ -93,19 +93,17 @@
           <option>Mexico</option>
           <option>United States</option>
         </select><br>
-        <label for="zip">Zip Code</label><br>
-        <input type="text" name="zip" id="zipcode"><br>
+        <label for="zipcode">Zip Code</label><br>
+        <input type="text" id="zipcode"><br>
       </fieldset>
 
       <fieldset>
         <legend>Add comments</legend>
-        <textarea name="commentbox" id="commentbox" rows="4" cols="50"></textarea>
+        <textarea name="commentbox" id="commentbox" rows="3" cols="50"></textarea>
       </fieldset><br>
 
-      <input id="submit" type="submit" value="Submit">
-      <input id="cancel" type="submit" value="Cancel">
+      <input type="submit" value="Submit">
     </form>
     <script src="script.js"></script>
-    
   </body>
 </html>
