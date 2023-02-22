@@ -3,4 +3,9 @@ body{
     font-weight: bold;
     font-size: large;
 }
-
+#upLeft{
+  float: left;
+}
+#upRight{
+  float:left;
+}
