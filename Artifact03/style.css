@@ -3,4 +3,18 @@ body{
     font-weight: bold;
     font-size: large;
 }
-
+#upLeft{
+    float: left;
+}
+#upRight{
+    float: bottom;
+}
+#downLeft{
+    float: left;
+}
+#downRight{
+    float: left;
+}
+.whiteSpace{
+  color: white;
+}
