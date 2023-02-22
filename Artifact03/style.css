@@ -4,8 +4,17 @@ body{
     font-size: large;
 }
 #upLeft{
-  float: left;
+    float: left;
 }
 #upRight{
-  float:left;
+    float: bottom;
+}
+#downLeft{
+    float: left;
+}
+#downRight{
+    float: left;
+}
+.whiteSpace{
+  color: white;
 }
