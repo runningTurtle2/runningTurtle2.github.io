@@ -93,16 +93,21 @@ function validateForm(){
     }
 
     //zipcode
-    if(country === "United States"){
+
+    if(country !== "United States"){
+        //No zip code is needed
+        validZipCode = true;
+    }
+    else if(country=== "United States"){
         if(zipCode==="" || !zipCode.match(numbers) || zipCode.length > 5){
             errorMessages +="<p>Invalid Zip Code</p>";
         }
         else{
-            validZipCode = true;
+        validZipCode = true;
         }
     }
     else{
-        validZipCode = true;
+        validZipCode = false;
     }
 
     document.getElementById("errorMessages").innerHTML = errorMessages;
@@ -116,5 +121,5 @@ function validateForm(){
     console.log(validAddress)
     console.log(validCity)
     //5) return status of each field
-    return (validFirstname && validLastname && validEmail && validPhone && validUsername && validPassword && validAddress && validCity);
+    return (validFirstname && validLastname && validEmail && validPhone && validUsername && validPassword && validAddress && validCity && validZipCode);
     }
