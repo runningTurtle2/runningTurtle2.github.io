@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Liquid Layout</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <link rel="stylesheet" media="screen"  href="https://fontlibrary.org//face/amaranth" type="text/css">
+	</head>
+	<body>
+		<div id="header">
+			<h1>Contact Me</h1>
+			<div id="nav">
+				<ul>
+					<li><a href="/Midterm/index.html">Home</a></li>
+                    <li><a href="/Midterm/about.html">About</a></li>
+					<li><a href="/Midterm/course.html">Coursework</a></li>
+					<li><a href="/Midterm/artifacts.html">Artifacts</a></li>
+					<li><a href="/Midterm/modules.html">Modules Assignments</a></li>
+					<li><a href="/Midterm/contact.html">Contact Me</a></li>
+                    <li><a href="/Midterm/creative.html">Creative Page</a></li>
+                    <li><a href="/Midterm/validated.html">Validated</a></li>
+				</ul>
+			</div>
+		</div>
+        
+		<div id="content">
+			<div id="feature">
+				<form action="/Midterm/thankyou.html" method="get" name="myContact">
+				<fieldset>
+					<label>
+						Name:
+						<input type="text" name="name" size="30" maxlength="40">
+					</label><br>
+					<label>
+						Email:
+						<input type="email" name="email" size="30" maxlength="60" onsubmit="return(validateEmail())">
+					</label><br>
+					<p>Comments:</p>
+					<label id="comment">
+						<textarea name="Comment" cols="35" rows="6" onsubmit="return(validateComm())">Enter comments...
+						</textarea>
+					</label><br>
+					<input type="submit" value="Submit">
+				</fieldset>
+				</form>
+			</div>
+        </div>
+		<script src="/Midterm/assets/reaction.js"></script>
+	</body>
+</html>

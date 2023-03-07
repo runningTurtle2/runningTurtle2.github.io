@@ -1,0 +1,59 @@
+* {
+	font-family: Arial, Verdana, sans-serif;
+	color: white;
+	}
+h1{
+   font-family: 'AmaranthRegular';
+   font-weight: bold;
+   font-style: normal;
+   font-size: 86px;
+   text-align: center;
+}
+body {
+  background-image:url("/Midterm/images/background.jpg");		  
+}
+#content {
+	overflow: auto;}
+#nav, #feature {
+	margin: 1%;}
+
+#nav li {
+	display: inline;
+	padding: 0.5em;
+    font-size: 24px;
+    font-weight:500;
+    text-align: left;
+}
+
+#nav{
+  background-color: rgba(127, 128, 130); 
+  border-radius: 4px;
+  text-align: left;
+}
+
+#feature {
+	height: auto;
+    border-radius: 10px;
+	margin-bottom: 1em;
+    background-color: rgba(177, 179, 181);
+    font-size: 23px;
+}
+ img{
+  width: 100px;
+  height: auto;
+}
+#validate img{
+  width: 480px;
+  height: auto;
+}
+.simple {
+  font-size: 30px;
+  height: auto;
+  
+}
+input, textarea{
+  color: black;
+  padding: .1em;
+  border-radius: 4px;
+  margin-top: 1px;
+}
