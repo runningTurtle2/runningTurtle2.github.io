@@ -1,3 +1,5 @@
+@import "navStyle.css";
+
 * {
 	font-family: Arial, Verdana, sans-serif;
 	color: white;
@@ -14,22 +16,6 @@ body {
 }
 #content {
 	overflow: auto;}
-#nav, #feature {
-	margin: 1%;}
-
-#nav li {
-	display: inline;
-	padding: 0.5em;
-    font-size: 24px;
-    font-weight:500;
-    text-align: left;
-}
-
-#nav{
-  background-color: rgba(127, 128, 130); 
-  border-radius: 4px;
-  text-align: left;
-}
 
 #feature {
 	height: auto;

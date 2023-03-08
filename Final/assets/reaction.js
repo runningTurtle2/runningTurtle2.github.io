@@ -1,25 +1,34 @@
-var name = document.getElementsByName('name');
-var email = document.getElementsByName('email');
-var comment = document.getElementsById('comment');
+function validForm(){
+// Create variable
+var validName = false;
+var validEmail = false;
+var errorMessages = "";
 
-function validateName(){
-    if (name == "")
-    {
-        alert("Name is not filled");
-        return false;
-    }
+// Read value from html
+var userEmail = document.getElementById("email").value;
+var atpos = userEmail.indexOf("@");
+var dotpos = userEmail.lastIndexOf(".");
+var name = document.getElementById("name");
+
+
+if (firstname==="null" || firstname==="" || firstname.length > 20 || !firstname.match(letters)){
+    errorMessages += "<p>The first name is required and cannot be greater than 20 characters. Only letters are accepted.</p>";
 }
-function validateEmail(){
-    if (email == "")
-    {
-        alert("Email is not filled");
-        return false;
-    }
+else{
+    validName = true;
 }
-function validateComm(){
-    if (comment === "" || comment === "Enter comments...")
-    {
-        alert("Comments is not filled");
-        return false;
-    }
+
+if (atpos< 1 || dotpos < atpos+2 || dotpos+2 >= userEmail.length) {
+    errorMessages += "<p>Invalid email</p>";
+}
+else{
+    validEmail = true; 
+}
+
+document.getElementById("errorMessage").innerHTML = errorMessages;
+// testing
+console.log(validEmail)
+console.log(validName)
+
+return(validEmail && validName);
 }
