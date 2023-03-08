@@ -24,16 +24,16 @@
         
 		<div id="content">
 			<div id="feature">
-				<form action="/Final/thankyou.html" onsubmit="return validForm()">
+				<form action="/Final/thankyou.html" onsubmit="return validForm();">
 				<fieldset>
-					<label>
+					<label for="name">
 						Name:
-						<input type="text" name="name" id="name">
-					</label><br>
-					<label>
+						<input type="text" id="name">
+					</label><div id="errorName"></div><br>
+					<label for="email">
 						Email:
-						<input type="email" name="email" id="email">
-					</label><br>
+						<input type="email" id="email">
+					</label><div id="errorEmail"></div><br>
 					<p>Comments:</p>
 					<label id="comment">
 						<textarea name="comment" cols="35" rows="6">Enter comments...
@@ -44,6 +44,6 @@
 				</form>
 			</div>
         </div>
-		<script src="assets/reaction.js"></script>
+		<script src="/Final/assets/reaction.js"></script>
 	</body>
 </html>
